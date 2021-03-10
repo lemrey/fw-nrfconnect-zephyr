@@ -557,6 +557,12 @@ __syscall int z_zsock_getaddrinfo_internal(const char *host,
 #define AI_ADDRCONFIG 0x20
 /** Assume service (port) is numeric */
 #define AI_NUMERICSERV 0x400
+/** Assume service contains a Packet Data Network (PDN) ID
+ *  which may be present by itself or separated from the service with a comma ','.
+ *  In both cases, the PDN ID is specified as follows: pdn_id=<pdn_id>
+ *  where <pdn_id> is the PDN ID.
+ */
+#define AI_PDNSERV 0x1000
 
 /**
  * @brief Resolve a domain name to one or more network addresses
